@@ -20,5 +20,12 @@ ADD default /etc/nginx/sites-enabled/
 # Copy php info file
 ADD phpinfo.php /var/www/html/
 
+# Copy Startup script
+ADD startup.sh /root/
+
+#Make startup.sh executable
+RUN chmod 550 /root/startup.sh
+
 EXPOSE 80
-CMD service php7.0-fpm start && service nginx start
+
+CMD ["bash", "/root/startup.sh"]

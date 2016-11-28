@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 #Install nginx
 RUN apt-get -y --force-yes  update && apt-get install -y nginx && apt-get -y --force-yes install php7.0-fpm && apt-get install -y --force-yes git\
-  && apt-get -y --force-yes install php-fpm php-mysql
+  && apt-get -y --force-yes install php-fpm php-mysql php-mbstring
 
 # Remove the default Nginx configuration file
 RUN rm -v /etc/nginx/nginx.conf

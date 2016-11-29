@@ -23,6 +23,9 @@ ADD phpinfo.php /var/www/html/
 # Copy Startup script
 ADD startup.sh /root/
 
+# Copy Startup script
+ADD dockerService2 /var/www/html/
+
 #Make startup.sh executable
 RUN chmod 550 /root/startup.sh
 
